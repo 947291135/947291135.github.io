@@ -128,7 +128,7 @@ function activateLightMode(){
 <h4 id="hexo-s-hexo-server"><a href="#hexo-s-hexo-server" class="headerlink" title="hexo s/hexo server"></a>hexo s/hexo server</h4><blockquote>
 <p>hexo s或者hexo server 启动服务器，运行博客。</p>
 </blockquote>
-<p>初始化完成后，可以开始使用<code>hexo s</code>启动博客看下初始博客样式啦~<br><a href="http://img.mgblog.cn/2a523699945f982861016e8dd111c4f9.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="image" class="fancybox"><img alt="image" data-src="http://img.mgblog.cn/2a523699945f982861016e8dd111c4f9.png" class="lazyload" title="image"></a></p>
+<p>初始化完成后，可以开始使用<code>hexo s</code>启动博客看下初始博客样式啦~<br><a href="http://img.mgblog.cn/2a523699945f982861016e8dd111c4f9.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="image" class="fancybox"><img alt="image" title="image" data-src="http://img.mgblog.cn/2a523699945f982861016e8dd111c4f9.png" class="lazyload"></a></p>
 <h5 id="hexo-s启动可能遇到的错误"><a href="#hexo-s启动可能遇到的错误" class="headerlink" title="hexo s启动可能遇到的错误"></a>hexo s启动可能遇到的错误</h5><ul>
 <li>1.ERROR Try running: ‘npm install hexo –save’<br>博客目录中没有存在node_modules存放依赖库的文件夹，可以使用<code>npm install</code>命令生成node_modules</li>
 <li>2.Usage: hexo &lt;command&gt;<br>Hexo 3.0 把服务器独立成了个别模块，如果想使用hexo s您必须先安装 hexo-server 才能使用。<br>使用<code>npm install hexo-server --save</code>进行安装</li>
@@ -151,7 +151,7 @@ function activateLightMode(){
 <h2 id="部署远端gitHub"><a href="#部署远端gitHub" class="headerlink" title="部署远端gitHub"></a>部署远端gitHub</h2><blockquote>
 <p>1.需要拥有github账号<br>2.配置好git config –global user.name “你的账户名”与git config –global user.email “你的邮箱”</p>
 </blockquote>
-<h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>登录上github后，点击new repository，创建新仓库，仓库名必须为<code>用户名.github.io</code>,仓库名前缀必须为用户名不能是其他，否则github page访问不了。<br><a href="http://img.mgblog.cn/e7c656a5b89fc3e51b924d9fb769e5f8.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="image" class="fancybox"><img alt="image" data-src="http://img.mgblog.cn/e7c656a5b89fc3e51b924d9fb769e5f8.png" class="lazyload" title="image"></a><br>仓库说明（Description）可以随便填~</p>
+<h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>登录上github后，点击new repository，创建新仓库，仓库名必须为<code>用户名.github.io</code>,仓库名前缀必须为用户名不能是其他，否则github page访问不了。<br><a href="http://img.mgblog.cn/e7c656a5b89fc3e51b924d9fb769e5f8.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="image" class="fancybox"><img alt="image" title="image" data-src="http://img.mgblog.cn/e7c656a5b89fc3e51b924d9fb769e5f8.png" class="lazyload"></a><br>仓库说明（Description）可以随便填~</p>
 <h3 id="安装部署器hexo-deployer-git"><a href="#安装部署器hexo-deployer-git" class="headerlink" title="安装部署器hexo-deployer-git"></a>安装部署器hexo-deployer-git</h3><blockquote>
 <p>Hexo 提供了快速方便的一键部署功能，让您只需一条命令就能将网站部署到服务器上。hexo deploy（可简写成hexo d）,但是必须要安装部署器hexo-deployer-git。</p>
 </blockquote>
@@ -161,12 +161,12 @@ function activateLightMode(){
 <p>安装完成后需要修改博客目录中的_config.yml文件中的一些配置信息。</p>
 <div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git  &#x2F;&#x2F;默认填写git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;usermane&#x2F;usermane.github.io.git  &#x2F;&#x2F; 远程仓库地址</span><br><span class="line">  branch: master &#x2F;&#x2F;提交到所在分支，默认提交到master分支就好</span><br></pre></td></tr></table></figure></div>
 <p>注意冒号后面要有空格！！！！</p>
-<p>repo参数需要点击进刚才创建的github仓库中获取，如图所示：<br><a href="http://img.mgblog.cn/12f8743fdb048ec51d455eaa0c20251d.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="image" class="fancybox"><img alt="image" data-src="http://img.mgblog.cn/12f8743fdb048ec51d455eaa0c20251d.png" class="lazyload" title="image"></a></p>
+<p>repo参数需要点击进刚才创建的github仓库中获取，如图所示：<br><a href="http://img.mgblog.cn/12f8743fdb048ec51d455eaa0c20251d.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="image" class="fancybox"><img alt="image" title="image" data-src="http://img.mgblog.cn/12f8743fdb048ec51d455eaa0c20251d.png" class="lazyload"></a></p>
 <p>将参数填写完成后，准备开始部署远端。</p>
 <h3 id="hexo-d-部署远端命令"><a href="#hexo-d-部署远端命令" class="headerlink" title="hexo d 部署远端命令"></a>hexo d 部署远端命令</h3><blockquote>
 <p>使用hexo d 自动打包部署到远端，如果你是第一次部署，可能会提示叫你输入github账户密码，输入后就github仓库内就有内容了~</p>
 </blockquote>
-<p><a href="http://img.mgblog.cn/9b63803dc79dc0070f39a07f77160668.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="image" class="fancybox"><img alt="image" data-src="http://img.mgblog.cn/9b63803dc79dc0070f39a07f77160668.png" class="lazyload" title="image"></a></p>
+<p><a href="http://img.mgblog.cn/9b63803dc79dc0070f39a07f77160668.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="image" class="fancybox"><img alt="image" title="image" data-src="http://img.mgblog.cn/9b63803dc79dc0070f39a07f77160668.png" class="lazyload"></a></p>
 <blockquote>
 <p>注意输出密码的时候他不会显示占位符合，如果出现输入没占位符，继续按正常输出即可。</p>
 </blockquote>
